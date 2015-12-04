@@ -9,7 +9,7 @@ $endif
 
 "\e`": "$(!!)"
 
-"\C-f": unix-filename-rubout
+#"\C-f": unix-filename-rubout
 
 "\e,": menu-complete
 
