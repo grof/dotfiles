@@ -8,6 +8,8 @@
   b       = branch
   ba      = branch -a
   bav     = branch -a -vvv
+  cb      = checkout -b
+  cm      = checkout master
   co      = checkout
   out     = log FETCH_HEAD..HEAD
   in      = log HEAD..FETCH_HEAD

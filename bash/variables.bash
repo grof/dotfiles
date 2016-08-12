@@ -37,6 +37,7 @@ export MANPATH=""
 
 unshift_path "/usr/X11"
 unshift_path ""
+unshift_path "/usr/local/share/npm"
 unshift_path "/usr"
 unshift_path "/usr/local"
 unshift_path "/opt/local"
