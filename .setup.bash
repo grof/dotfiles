@@ -25,17 +25,15 @@ relink .gitignore    $DOTFILES/gitignore
 relink .screenrc     $DOTFILES/screenrc
 relink .tmux.conf    $DOTFILES/tmux.conf
 
-relink .irbrc        $DOTFILES/irbrc
-relink .rdebugrc     $DOTFILES/rdebugrc
-relink .rvmrc        $DOTFILES/rvmrc
-relink .gemrc        $DOTFILES/gemrc
+relink .irbrc        $DOTFILES/ruby/irbrc
+relink .rvmrc        $DOTFILES/ruby/rvmrc
+relink .gemrc        $DOTFILES/ruby/gemrc
 
 relink .npmrc        $DOTFILES/npmrc
 relink .eslintrc     $DOTFILES/eslintrc
 
 relink .Rprofile     $DOTFILES/r/Rprofile
 
-relink .hydra        $DOTFILES/hydra
 relink .slate        $DOTFILES/slate
 
 relink .filter       $DOTFILES/filter

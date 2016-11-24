@@ -47,7 +47,10 @@ serve() {
 alias R="R --quiet"
 alias r="R --quiet"
 
-alias octave="octave --quiet"
+alias octave="octave-cli --quiet"
+alias maxima="rlwrap maxima --quiet"
 
 alias cask="brew cask"
+
+alias sqlite3="sqlite3 -header -column -nullvalue NULL"
 

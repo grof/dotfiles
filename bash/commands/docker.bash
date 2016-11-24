@@ -1,8 +1,5 @@
 
-docker() {
-  if [ -z "$DOCKER_HOST" ]; then
-    eval "$(boot2docker shellinit)"
-  fi
-  command docker "$@"
+minizinc() {
+  docker run --rm -it -v $(pwd):/data -w /data inzinger/minizinc minizinc "$@"
 }
 

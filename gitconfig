@@ -16,6 +16,7 @@
   ignored = !git clean -ndX | sed -e 's/^Would remove //'
   ffm     = merge --ff-only
   ffp     = pull --ff-only
+  cp      = cherry-pick
 [diff]
   noprefix = true
   tool = vimdiff

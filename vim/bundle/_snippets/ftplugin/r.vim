@@ -7,6 +7,10 @@ Snippet 'fn', 'function ('
 Snippet '(', '() {|}'
 " block after )
 Snippet ')', ') {|}'
+" equal sign to arrow :-)
+Snippet '=', '<- '
+" magrittr
+Snippet '|', '%>% '
 
 Snippet 'purge',  'rm(list=ls())'
 SnippetComplete 'legend', 'theme(legend.position="none")'
