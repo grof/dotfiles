@@ -16,6 +16,9 @@ nnoremap <ESC>n :set number!<CR>
 nnoremap <ESC>N :set relativenumber!<CR>
 nnoremap <ESC><SPACE> :nohl<CR>
 
+" grof's tab to see buffers
+nnoremap <tab> :buffers<CR>:buffer<Space>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMA MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""

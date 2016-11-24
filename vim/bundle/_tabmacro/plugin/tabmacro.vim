@@ -20,5 +20,6 @@ function! TabMacroify()
   endfor
 endfunction
 
-nnoremap <TAB> :call TabMacroify()<CR>
+" would allow to execute current line
+"nnoremap <TAB> :call TabMacroify()<CR>
 
