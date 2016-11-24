@@ -16,7 +16,7 @@ relink .bashrc       $DOTFILES/bashrc
 relink .bash_profile $DOTFILES/bash_profile
 relink .bash_logout  $DOTFILES/bash_logout
 
-relink .vim          $DOTFILES/vim
+relink -f .vim       $DOTFILES/vim
 relink .vimrc        $DOTFILES/vimrc
 
 relink .gitconfig    $DOTFILES/gitconfig

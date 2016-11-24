@@ -1,0 +1,4 @@
+#!/bin/bash
+
+brew unlink node6-lts
+brew link node012

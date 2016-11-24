@@ -53,7 +53,7 @@ set diffopt=filler,iwhite
 set spellcapcheck=
 
 if match($TERM, '256color$') != -1
-  colorscheme 256_jellyx
+  colorscheme 256_xoria
 endif
 
 " This is useful for debugging
@@ -77,15 +77,13 @@ augroup END
 
 " use tmux for slime
 let g:slime_target = "tmux"
+"let g:slime_default_config = {"socket_name": "default", "target_pane": "3"}
+let g:jsx_ext_required = 0
+
 nmap <c-c><c-l> :SlimeSend0 ""<CR>
 nmap <c-c><c-u> :SlimeSend0 "\x15"<CR>
 
-" auto-target -- this might not be a good idea
-let target_pane = system("cat $HOME/.target_pane")
-if (target_pane == "")
-  let target_pane = ":"
-endif
-let g:slime_default_config = {"socket_name": "default", "target_pane": target_pane}
+let g:slime_default_config = {"socket_name": "default", "target_pane": "%"}
 
 let g:NERDCustomDelimiters = {
   \ 'zinc': { 'left': '%'},
@@ -94,4 +92,4 @@ let g:NERDCustomDelimiters = {
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source $HOME/.vim/mappings.vim
-
+let g:syntastic_javascript_checkers = ['eslint']
