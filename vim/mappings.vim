@@ -3,6 +3,8 @@
 " F-KEYS MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+nnoremap <F2>   :ALENextWrap<CR>
+
 nnoremap <F5>   :ToggleSpaceHi<CR>
 inoremap <F5>   <C-o>:ToggleSpaceHi<CR>
 nnoremap <F6>   :set spell!<CR>
@@ -38,9 +40,6 @@ endfunction
 " STRIP -- EMPTY LINE ENDINGS
 nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 vnoremap _$ :call Preserve( "s/\\s\\+$//e")<CR>
-" STRIP -- EMPTY LINE BEGINNINGS
-nnoremap _^ :call Preserve("%s/^\\s\\+//e")<CR>
-vnoremap _^ :call Preserve( "s/^\\s\\+//e")<CR>
 
 " COMMATIZE
 vnoremap ,, :! paste -s -d, -<CR>
@@ -53,10 +52,6 @@ vnoremap ,a :! awk '{print }'<LEFT><LEFT>
 " ONLY KEEP LINES WHICH CONTAIN SEARCH
 nnoremap ,v :v/<C-R>//d<CR>gg
 nnoremap ,d :g/<C-R>//d<CR>gg
-
-" show future dates
-nnoremap ,f :! future<CR>
-vnoremap ,f :w !grep -o -w ....-..-.. \| xargs -n1 future<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OTHER MAPPINGS
@@ -116,6 +111,31 @@ nnoremap <silent> ]q :cnext<CR>
 nnoremap <silent> [l :lprevious<CR>
 nnoremap <silent> ]l :lnext<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BAG
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap ,b :r !bag<CR>
+vmap ,b :w !bag<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PIPE-ALIGNMENT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+function! BarTab() range
+  let line = getline((a:firstline + a:lastline)/2)
+  if match(line, ':') != -1
+    let @y = "gv:Tabularize /:\\zs/l0l1"
+    return
+  endif
+  if match(line, '=') != -1
+    let @y = "gv:Tabularize /="
+    return
+  endif
+  let @y = "gv:Tabularize /"
+endfunction
+
+vnoremap <BAR> :call BarTab()<CR>@y
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLORSCHEME ROTATION

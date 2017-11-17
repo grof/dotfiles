@@ -8,7 +8,7 @@ h() {
   if [ -z "$@" ]; then
     history $COUNT
   else
-    history | ack "$@" | tail -n $COUNT
+    history | grep -i "$@" | tail -n $COUNT
   fi
 }
 
@@ -20,10 +20,6 @@ alias man=vman
 
 vman() {
   \man "$@" | col -b | view - -c "set ft=man nomod"
-}
-
-manfiles() {
-  find $(echo $MANPATH | tr : ' ') -type f
 }
 
 #-------------------------------------------------
@@ -38,7 +34,7 @@ size_sort() {
 
 #-------------------------------------------------
 
-alias apg='apg -a 1 -n 20 -m 20 -M SNCL -s'
+alias pwgen='pwgen -cny 30'
 
 serve() {
   python -m SimpleHTTPServer ${1:-8000}
@@ -51,6 +47,4 @@ alias octave="octave-cli --quiet"
 alias maxima="rlwrap maxima --quiet"
 
 alias cask="brew cask"
-
-alias sqlite3="sqlite3 -header -column -nullvalue NULL"
 

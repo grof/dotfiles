@@ -38,19 +38,9 @@ b() {
 
 #-------------------------------------------------
 
-# pick from a list of directories (recursive) and cd into it
-cdf() {
-  pick_with_vim "ack_find" "cd"
-}
-
 # pick from a list of directories (ls) and cd into it
 cdl() {
   pick_with_vim "ls" "cd" $1
-}
-
-# inspired by zsh
-take() {
-  mkdir -p "$@" && cd "$@"
 }
 
 # inspired by zsh

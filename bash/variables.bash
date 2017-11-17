@@ -55,8 +55,7 @@ export GZIP="-9"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-export ACK_COLOR_FILENAME="cyan"
-export ACK_COLOR_MATCH="bold red"
-
 export RLWRAP_HOME=$HOME/.rlwrap
+
+export FZF_DEFAULT_OPTS="--height 30 --reverse --border --inline-info"
 

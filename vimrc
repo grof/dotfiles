@@ -5,10 +5,6 @@
 " VIM, not VI
 set nocompatible
 
-" pathogen bundles
-filetype off
-call pathogen#runtime_append_all_bundles()
-
 " General appearance and behaviour
 filetype plugin indent on
 syntax on
@@ -42,7 +38,6 @@ set virtualedit=block
 set scrolloff=1
 
 set equalprg=
-set grepprg=ack\ -ai
 
 " don't insert 2 spaces after punctuation
 set nojoinspaces
@@ -72,9 +67,9 @@ augroup mostly_spacehi
   autocmd FileType scratchy NoSpaceHi
   autocmd FileType go       NoSpaceHi
   autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost,Syntax,BufWritePost *.go NoSpaceHi
+  autocmd FileType make     NoSpaceHi
+  autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost,Syntax,BufWritePost Makefile NoSpaceHi
 augroup END
-
-let g:syntastic_go_checkers=['go','gofmt','govet']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
