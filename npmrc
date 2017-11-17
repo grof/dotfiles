@@ -1,1 +1,2 @@
-prefix = ~/local
+prefix=/Users/grof/local
+jobs=1
