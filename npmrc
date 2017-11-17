@@ -1,2 +1,4 @@
 prefix=/Users/grof/local
 jobs=1
+python=/usr/bin/python
+save-exact=true
