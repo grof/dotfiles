@@ -40,5 +40,11 @@ bundle.tabular:
 	@rm -rf tabular/.git
 	@find tabular -name .gitignore | xargs rm
 
-.PHONY: bundle.ale bundle.fugitive bundle.gnupg bundle.nerdcommenter bundle.slime bundle.spacehi bundle.tabular
+bundle.vim-css-colors:
+	@rm -rf vim-css-colors
+	git clone --depth=1 https://github.com/ap/vim-css-color.git vim-css-colors
+	@rm -rf vim-css-colors/.git
+	@find vim-css-colors -name .gitignore | xargs rm
+
+.PHONY: bundle.ale bundle.fugitive bundle.gnupg bundle.nerdcommenter bundle.slime bundle.spacehi bundle.tabular bundle.vim-css-colors
 

@@ -5,3 +5,4 @@ nerdcommenter  https://github.com/scrooloose/nerdcommenter.git
 slime          https://github.com/jpalardy/vim-slime
 spacehi        https://github.com/jpalardy/spacehi.vim.git
 tabular        https://github.com/godlygeek/tabular.git
+vim-css-colors https://github.com/ap/vim-css-color.git
