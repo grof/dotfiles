@@ -1,0 +1,9 @@
+#!/bin/bash
+
+bins="date du ls seq shuf sort tac find awk sed tar"
+for bin in $bins; do
+  cd $HOME/local/bin
+  ln -s /usr/local/bin/g${bin} $bin
+  cd $HOME/local/share/man/man1
+  ln -s /usr/local/share/man/man1/g${bin}.1 ${bin}.1
+done

@@ -1,24 +1,27 @@
 #!/bin/bash
 
-flag="$@"
+# This file is obsolete. Delete once
+# .setup.gnu-commonds has been proven
 
-function relink() {
-  ln -s -v $flag $2 $1
-}
+#flag="$@"
 
-COREFILES="/usr/local/bin"
+#function relink() {
+  #ln -s -v $flag $2 $1
+#}
 
-mkdir -p ~/local/bin
-cd ~/local/bin
+#COREFILES="/usr/local/bin"
 
-relink awk   $COREFILES/gawk
-relink date  $COREFILES/gdate
-relink du    $COREFILES/gdu
-relink find  $COREFILES/gfind
-relink ls    $COREFILES/gls
-relink sed   $COREFILES/gsed
-relink seq   $COREFILES/gseq
-relink shuf  $COREFILES/gshuf
-relink sort  $COREFILES/gsort
-relink tar   $COREFILES/gtar
+#mkdir -p ~/local/bin
+#cd ~/local/bin
+
+#relink awk   $COREFILES/gawk
+#relink date  $COREFILES/gdate
+#relink du    $COREFILES/gdu
+#relink find  $COREFILES/gfind
+#relink ls    $COREFILES/gls
+#relink sed   $COREFILES/gsed
+#relink seq   $COREFILES/gseq
+#relink shuf  $COREFILES/gshuf
+#relink sort  $COREFILES/gsort
+#relink tar   $COREFILES/gtar
 
